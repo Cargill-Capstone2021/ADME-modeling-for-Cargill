@@ -24,7 +24,7 @@
 	- *Output* - New model that meets the new expectations of the users
 
 5. Predict similarity of natural product derived drugs to conventional drugs for set application
-        - *User* - Researchers
-        - *Input* - list of SMILE strings of natural product derived drugs and the SMILE string of a target conventional drug
-        - *Function* - compare natural products to the conventional drug based on their AMDE/Tox and rank them based on prediction of fitness for application
-        - *Output* - ranking of the input natural product based on the suitability for the set application (which of the natural drugs is the best candidate)
+    - *User* - Researchers
+    - *Input* - List of SMILE strings of natural product derived drugs and the SMILE string of a target conventional drug
+    - *Function* - Compare natural products to the conventional drug based on their AMDE/Tox and rank them based on prediction of fitness for application
+    - *Output* - Ranking of the input natural product based on the suitability for the set application (which of the natural drugs is the best candidate)
