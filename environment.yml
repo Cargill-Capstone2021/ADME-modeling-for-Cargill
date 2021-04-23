@@ -333,7 +333,6 @@ dependencies:
     - matplotlib==3.3.3
     - oauthlib==3.1.0
     - opt-einsum==3.3.0
-    - optuna==2.5.0
     - pbr==5.5.1
     - prettytable==2.0.0
     - protobuf==3.15.4
