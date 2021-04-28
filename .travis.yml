@@ -1,0 +1,31 @@
+language: Python
+  -version:3.7
+
+# if you are updating an old repo or one created by the git command
+# line tools, you may need to use master instead of main
+#  - master
+branches:
+    only:
+        - main
+
+# commands to prepare the conda install - download the latest conda
+# and install it and add to path
+before_install:
+    - wget -O miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    - chmod +x miniconda.sh
+    - ./miniconda.sh -b
+    - export PATH=/home/travis/miniconda3/bin:$PATH
+    - conda update --yes conda
+    - source $(conda info --root)/etc/profile.d/conda.sh
+
+# list of commands to run to setup the environment
+install:
+    - conda env create -q -n test-environment python=$TRAVIS_PYTHON_VERSION --file environment.yml
+    - conda activate test-environment
+    - conda install --yes coverage coveralls # pylint
+
+# the actual commands to run
+script:
+    - cd tests 
+    - coverage run -m unittest test.py 
+
