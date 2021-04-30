@@ -227,6 +227,7 @@ dependencies:
   - python-language-server=0.35.1=py_0
   - python-libarchive-c=2.9=py_0
   - python.app=2=py38_10
+  - pytorch>=1.8.1
   - pytz=2020.1=py_0
   - pywavelets=1.1.1=py38haf1e3a3_2
   - pyyaml=5.3.1=py38haf1e3a3_1
