@@ -1,4 +1,4 @@
-name: base
+name: adme
 channels:
   - anaconda
   - conda-forge
