@@ -17,7 +17,7 @@ Compounds and their metabolites need to be removed from the body via excretion, 
 There are three main sites where drug excretion occurs. The kidney is the most important site and it is where products are excreted through urine. Biliary excretion or fecal excretion is the process that initiates in the liver and passes through to the gut until the products are finally excreted along with waste products or feces. The last main method of excretion is through the lungs (e.g. anesthetic gases).
 
 
-The goal of this project is to build a machine learning model to predict the Absorption, Digestion, Metabolism and Excretion, properties of drugs that are in discoverey for farm animals. 
+The goal of this project is to build a machine learning model to predict the ADMET properties of drugs that are in discoverey for farm animals. 
 
 <img width="738" alt="Screen Shot 2021-05-06 at 11 12 54 PM" src="https://user-images.githubusercontent.com/76990124/117405568-b0e9d380-aec0-11eb-96af-4ce64d129e78.png">
 
