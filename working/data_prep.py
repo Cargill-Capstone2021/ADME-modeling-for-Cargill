@@ -6,10 +6,12 @@ def pre_clean_data(df):
     """
     Pre-clean the DataFrame directly extracted from ChemBL data base by 
     dropping unnecessary columns and rows.
+
     Parameters
     ----------
     df: DataFrame
         DataFrame directly extracted from ChemBL data base with sql.
+    
     Returns
     -------
     DataFrame
@@ -58,9 +60,12 @@ def rearrange_and_clean_data(df):
     Add new empty columns with 'standard_types/standard_units' as the column 
     headers and then fill the table cells with standard values. 
     Drop unnecessary rows and columns.
+    
+    Parameters
     ----------
     df: DataFrame
         DataFrame returned by the pre_clean_data(df) function.
+    
     Returns
     -------
     DataFrame
@@ -83,13 +88,14 @@ def rearrange_and_clean_data(df):
     for index, row in df.iterrows():
         types = str(row['standard_type']) + ' /' + str(row['standard_units'])
         if types in header_list:
-            df_cattleplusrat.loc[index, types] = row['standard_value']
+            df.loc[index, types] = row['standard_value']
         else:
             rows_to_drop.append(index)
 
     df.drop(rows_to_drop, inplace = True)
    
     df = df.drop(columns=['standard_type', 'standard_value', 'standard_units'])
+    df = df.reset_index(drop=True)    
     
     return df
 
@@ -97,9 +103,12 @@ def rearrange_and_clean_data(df):
 def combine_rows(df):
     """
     Combine the rows that represent the same molecule (same 'chembl_id').
+    
+    Parameters
     ----------
     df: DataFrame
         DataFrame returned by rearrange_and_clean_data(df) function.
+
     Returns
     -------
     DataFrame
@@ -125,10 +134,12 @@ def combine_rows(df):
     return df_final
 
 
-def data_prep (df):
+def data_prep(df):
     """
     Clean and reorganize the data extracted directly from ChemBL data base for 
     the purpose of training the machine learning model.
+
+    Parameters
     ----------
     df: DataFrame
         DataFrame extracted directly from ChemBL data base.
