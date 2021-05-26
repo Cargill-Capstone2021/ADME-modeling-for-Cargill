@@ -19,6 +19,7 @@ There are three main sites where drug excretion occurs. The kidney is the most i
 
 The goal of this project is to build a machine learning model to predict the ADMET properties of drugs that are in discoverey for farm animals. 
 
-<img width="1433" alt="gantt chart" src="https://user-images.githubusercontent.com/76990124/118018481-b30ec080-b30c-11eb-91f8-38628d95c52d.png">
+![Screen Shot 2021-05-26 at 10 09 19 AM](https://user-images.githubusercontent.com/76989563/119702935-e1ab9180-be0a-11eb-80ca-afe0204d213e.png)
+
 
 
