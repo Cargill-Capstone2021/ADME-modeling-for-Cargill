@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import math
 
 
 def pre_clean_data(df):
@@ -73,11 +74,15 @@ def rearrange_and_clean_data(df):
     """
     # The features we want to predict.
     header_list = [
-        'T1/2 /hr', 'F /%', 'AUC /ng.hr.mL-1', 'Drug uptake /% ID/g', 'IC50 /nM', 
-        'Cmax /ug.mL-1', 'Vdss /L.kg-1', 'CL /mL.min-1.kg-1', 'LD50 /mg.kg-1', 
-        'PPB /%', 'Drug metabolism /nan', 'Distribution /%', 'ED50 /mg.kg-1', 
-        'Permeability /nan', 'Ratio /nan', 'Papp /ucm/s']
+        'T1/2 /hr', 'F /%', 'AUC /ng.hr.mL-1', 'IC50 /nM', 'Cmax /ug.mL-1', 
+        'Vdss /L.kg-1', 'CL /mL.min-1.kg-1', 'LD50 /mg.kg-1', 'PPB /%', 
+        'Papp /ucm/s']
     
+    new_columns = ['chembl_id', 'organism', 'canonical_smiles', 'T1/2 /hr', 
+        'F /%', 'AUC /ng.hr.mL-1', 'IC50 /nM', 'Cmax /ug.mL-1', 
+        'Vdss /L.kg-1', 'CL /mL.min-1.kg-1', 'LD50 /mg.kg-1', 'PPB /%', 
+        'Papp /ucm/s']
+
     # Add empty columns with the features as the column headers.
     for i in header_list:
         df[i] = np.nan
@@ -96,6 +101,7 @@ def rearrange_and_clean_data(df):
    
     df = df.drop(columns=['standard_type', 'standard_value', 'standard_units'])
     df = df.reset_index(drop=True)    
+    df = df[new_columns]
     
     return df
 
@@ -134,22 +140,128 @@ def combine_rows(df):
     return df_final
 
 
-def data_prep(df):
-    """
-    Clean and reorganize the data extracted directly from ChemBL data base for 
-    the purpose of training the machine learning model.
 
+def remove_NaN(df_final):
+    """
+    Remove all the NaN values for individual feature.
+    
     Parameters
     ----------
     df: DataFrame
-        DataFrame extracted directly from ChemBL data base.
+        DataFrame obtained from combine_rows.
+        
     Returns
     -------
     DataFrame
-        The final DataFrame ready to be trained.
+        The final DataFrames ready to be trained.
     """
-    df1 = pre_clean_data(df)
-    df2 = rearrange_and_clean_data(df1)
-    df_final = combine_rows(df2)
+    columns_T_half = ['chembl_id', 'organism', 'canonical_smiles', 'T1/2 /hr']
+    df_T_half_pre = df_final[columns_T_half]
+
+    columns_F = ['chembl_id', 'organism', 'canonical_smiles', 'F /%']
+    df_F_pre = df_final[columns_F] 
+
+    columns_AUC = ['chembl_id', 'organism', 'canonical_smiles', 'AUC /ng.hr.mL-1']
+    df_AUC_pre = df_final[columns_AUC] 
+
+    columns_Cmax = ['chembl_id', 'organism', 'canonical_smiles', 'Cmax /ug.mL-1']
+    df_Cmax_pre = df_final[columns_Cmax] 
+
+    columns_Vdss = ['chembl_id', 'organism', 'canonical_smiles', 'Vdss /L.kg-1']
+    df_Vdss_pre = df_final[columns_Vdss] 
+
+    columns_CL = ['chembl_id', 'organism', 'canonical_smiles', 'CL /mL.min-1.kg-1']
+    df_CL_pre = df_final[columns_CL]  
+
+    columns_LD50 = ['chembl_id', 'organism', 'canonical_smiles', 'LD50 /mg.kg-1']
+    df_LD50_pre = df_final[columns_LD50]
+
+    columns_IC50 = ['chembl_id', 'organism', 'canonical_smiles', 'IC50 /nM']
+    df_IC50_pre = df_final[columns_IC50]
+
+    columns_PPB = ['chembl_id', 'organism', 'canonical_smiles', 'PPB /%']
+    df_PPB_pre = df_final[columns_PPB]
     
-    return df_final
+    rows_to_drop_T_half = []
+    for index, row in df_T_half_pre.iterrows():
+        if math.isnan(row['T1/2 /hr']) == True:
+            rows_to_drop_T_half.append(index)
+
+    df_T_half_final = df_T_half_pre.drop(rows_to_drop_T_half)
+    df_T_half_final = df_T_half_final.reset_index(drop=True)
+
+
+    rows_to_drop_F = []
+    for index, row in df_F_pre.iterrows():
+        if math.isnan(row['F /%']) == True:
+            rows_to_drop_F.append(index)
+
+    df_F_final = df_F_pre.drop(rows_to_drop_F)
+    df_F_final = df_F_final.reset_index(drop=True)
+
+
+    rows_to_drop_AUC = []
+    for index, row in df_AUC_pre.iterrows():
+        if math.isnan(row['AUC /ng.hr.mL-1']) == True:
+            rows_to_drop_AUC.append(index)
+
+    df_AUC_final = df_AUC_pre.drop(rows_to_drop_AUC)
+    df_AUC_final = df_AUC_final.reset_index(drop=True)
+
+
+    rows_to_drop_Cmax = []
+    for index, row in df_Cmax_pre.iterrows():
+        if math.isnan(row['Cmax /ug.mL-1']) == True:
+            rows_to_drop_Cmax.append(index)
+
+    df_Cmax_final = df_Cmax_pre.drop(rows_to_drop_Cmax)
+    df_Cmax_final = df_Cmax_final.reset_index(drop=True)
+
+
+    rows_to_drop_Vdss = []
+    for index, row in df_Vdss_pre.iterrows():
+        if math.isnan(row['Vdss /L.kg-1']) == True:
+            rows_to_drop_Vdss.append(index)
+
+    df_Vdss_final = df_Vdss_pre.drop(rows_to_drop_Vdss)
+    df_Vdss_final = df_Vdss_final.reset_index(drop=True)
+
+
+    rows_to_drop_CL = []
+    for index, row in df_CL_pre.iterrows():
+        if math.isnan(row['CL /mL.min-1.kg-1']) == True:
+            rows_to_drop_CL.append(index)
+
+    df_CL_final = df_CL_pre.drop(rows_to_drop_CL)
+    df_CL_final = df_CL_final.reset_index(drop=True)
+
+
+    rows_to_drop_LD50 = []
+    for index, row in df_LD50_pre.iterrows():
+        if math.isnan(row['LD50 /mg.kg-1']) == True:
+            rows_to_drop_LD50.append(index)
+
+    df_LD50_final = df_LD50_pre.drop(rows_to_drop_LD50)
+    df_LD50_final = df_LD50_final.reset_index(drop=True)
+
+
+    rows_to_drop_IC50 = []
+    for index, row in df_IC50_pre.iterrows():
+        if math.isnan(row['IC50 /nM']) == True:
+            rows_to_drop_IC50.append(index)
+
+    df_IC50_final = df_IC50_pre.drop(rows_to_drop_IC50)
+    df_IC50_final = df_IC50_final.reset_index(drop=True)
+
+
+    rows_to_drop_PPB = []
+    for index, row in df_PPB_pre.iterrows():
+        if math.isnan(row['PPB /%']) == True:
+            rows_to_drop_PPB.append(index)
+
+    df_PPB_final = df_PPB_pre.drop(rows_to_drop_PPB)
+    df_PPB_final = df_PPB_final.reset_index(drop=True)
+    
+    return df_T_half_final, df_F_final, df_AUC_final, df_Cmax_final,\
+           df_Vdss_final, df_CL_final, df_LD50_final, df_IC50_final,\
+           df_PPB_final
