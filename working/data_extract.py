@@ -29,7 +29,7 @@ def dbfile_to_dataframe(dbfile):
 
     con = sqlite3.connect(dbfile)
 
-    df = pd.read_sql_query("""SELECT * FROM source""", con )
+    df = pd.read_sql_query("""SELECT * FROM source""", con)
 
     return df
 
@@ -51,4 +51,3 @@ def merged_data(df1, df2):
     df_merged = pd.concat([df1, df2])
 
     return df_merged
-
