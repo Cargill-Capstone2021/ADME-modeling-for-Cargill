@@ -1,25 +1,54 @@
 # ADME-modeling-for-Cargill
 
-ADME is an abbreviation in pharmacokinetics and pharmacology for "absorption, distribution, metabolism, and excretion", and describes the disposition of a pharmaceutical compound within an organism. The four criteria all influence the drug levels and kinetics of drug exposure to the tissues and hence influence the performance and pharmacological activity of the compound as a drug.
+**ADME-modeling-for-Cargill** is a capstone project that was sponsored by Cargill, Inc. and was developed by graduate students from the DIRECT data science program in the University of Washington.  
 
-## Absorption 
-For a compound to reach a tissue, it usually must be taken into the bloodstream - often via mucous surfaces like the digestive tract (intestinal absorption) - before being taken up by the target cells. Factors such as poor compound solubility, gastric emptying time, intestinal transit time, chemical instability in the stomach, and inability to permeate the intestinal wall can all reduce the extent to which a drug is absorbed after oral administration. Absorption critically determines the compound's bioavailability.
+## Description
+Do you know that developing a new drug takes at least 10 years, with the lead generation taking 3 to 4 years and clinical trails taking six to seven years on average? Any method that can shorten this prosses will be life saving and money saving. The goal of this project is to build a machine learning model that takes the SMILES strings of the drug candidates that are targetted for farm animals and predicts their ADME and toxicity properties in the early drug discovery process. ADME is an abbreviation in pharmacokinetics and pharmacology for "absorption, distribution, metabolism, and excretion", and describes the disposition of a pharmaceutical compound within an organism. The four criteria all influence the drug levels and kinetics of drug exposure to the tissues and hence influence the performance and pharmacological activity of the compound as a drug. With this *in silico* approach, the drug discovery process can be accelerated by 2-3 years. In addition, unnecessary cost and some of the animal experiments can be avoided.
 
-## Distribution
-The compound needs to be carried to its effector site, most often via the bloodstream. From there, the compound may distribute into muscle and organs, usually to differing extents. After entry into the systemic circulation, either by intravascular injection or by absorption from any of the various extracellular sites, the drug is subjected to numerous distribution processes that tend to lower its plasma concentration.
+## Get started
+### Clone the repository
+```
+https://github.com/Cargill-Capstone2021/ADME-modeling-for-Cargill.git
+```
 
-## Metabolism
-Compounds begin to break down as soon as they enter the body. The majority of small-molecule drug metabolism is carried out in the liver by enzymes. As metabolism occurs, the initial (parent) compound is converted to new compounds called metabolites. When metabolites are pharmacologically inert, metabolism deactivates the administered dose of parent drug and this usually reduces the effects on the body.
+### Install the environment
 
-## Excretion
-Compounds and their metabolites need to be removed from the body via excretion, usually through the kidneys (urine) or in the feces. Unless excretion is complete, accumulation of foreign substances can adversely affect normal metabolism.
+```
+conda env create -f environment.yml
+```
+### Load the environment
+```
+conda activate adme
+```
 
-There are three main sites where drug excretion occurs. The kidney is the most important site and it is where products are excreted through urine. Biliary excretion or fecal excretion is the process that initiates in the liver and passes through to the gut until the products are finally excreted along with waste products or feces. The last main method of excretion is through the lungs (e.g. anesthetic gases).
+### Using the code
+1. Data extraction
+- use data_extract.py to extract data from ChemBL database
+
+2. Data prep
+- use data_prep.py to process the data obtained from the last step
+
+3. Train the default model for each ADME feature (SVR_regressor_method.py)
+
+4. Use the model to predict the ADME features of a drug candidate
+
+### Examples
+
+See [examples.ipynb](https://github.com/Cargill-Capstone2021/ADME-modeling-for-Cargill.git) for more details on how to use the code.
+
+## Authors
+Sara Aalinezhad - Department of Chemical Engineering, MS
+
+Yuxuan Ren  - Department of Chemical Engineering, MS
+
+Salek Segid - Department of Chemical Engineering, MS
+
+Liwen Xing - Molecular Engineering & Sciences Institute, PhD
 
 
-The goal of this project is to build a machine learning model to predict the ADMET properties of drugs that are in discoverey for farm animals. 
+## License
 
-
+This project is licensed under the MIT License - see `LICENSE` for details.
 
 
 
