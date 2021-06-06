@@ -10,7 +10,15 @@ Do you know that developing a new drug takes at least 10 years, with the lead ge
 ```
 https://github.com/Cargill-Capstone2021/ADME-modeling-for-Cargill.git
 ```
-
+### Install rdkit
+```
+! wget https://repo.anaconda.com/miniconda/Miniconda3-py37_4.8.2-Linux-x86_64.sh
+! chmod +x Miniconda3-py37_4.8.2-Linux-x86_64.sh
+! bash ./Miniconda3-py37_4.8.2-Linux-x86_64.sh -b -f -p /usr/local
+! conda install -c rdkit rdkit -y
+import sys
+sys.path.append('/usr/local/lib/python3.7/site-packages/')
+```
 ### Install the environment
 
 ```
