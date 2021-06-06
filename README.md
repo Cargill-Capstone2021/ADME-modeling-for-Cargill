@@ -45,9 +45,9 @@ conda activate adme
 See [examples.ipynb](https://github.com/Cargill-Capstone2021/ADME-modeling-for-Cargill.git) for more details on how to use the code.
 
 ## Authors
-Sara Aalinezhad - Department of Chemical Engineering, MS
+Sara Aalinezhad - Chemical Engineering, MS
 
-Salek Segid - Department of Chemical Engineering, MS
+Salek Segid - Chemical Engineering, MS
 
 Liwen Xing - Molecular Engineering & Sciences Institute, PhD
 
