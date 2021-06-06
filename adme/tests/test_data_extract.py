@@ -9,8 +9,8 @@ import data_extract
 
 
 class Testdataextract(unittest.TestCase):
-    def test_dbfile_to_dataframe(self):
-        result = list(data_extract.dbfile_to_dataframe('source.db').columns)
+    def test_database_file_to_data_frame(self):
+        result = list(data_extract.database_file_to_data_frame('source.db').columns)
         self.assertEqual(result, ['organism', 'standard_type', 'standard_value', 'standard_units', 'chembl_id',
                                   'canonical_smiles']), 'unexpected result'
         return
