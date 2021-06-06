@@ -6,6 +6,7 @@ channels:
 dependencies:
   - _ipyw_jlab_nb_ext_conf=0.1.0=py38_0
   - alabaster=0.7.12=py_0
+  -- altair=4.1.0
   - anaconda=2020.11=py38_0
   - anaconda-client=1.7.2=py38_0
   - anaconda-navigator=1.10.0=py38_0
@@ -147,6 +148,7 @@ dependencies:
   - lz4-c=1.9.2=h79c402e_3
   - lzo=2.10=haf1e3a3_2
   - markupsafe=1.1.1=py38h1de35cc_1
+  - matplotlib=3.3.4
   - mccabe=0.6.1=py38_1
   - mistune=0.8.4=py38h1de35cc_1001
   - mkl=2019.4=233
@@ -245,6 +247,7 @@ dependencies:
   - rtree=0.9.4=py38_1
   - ruamel_yaml=0.15.87=py38haf1e3a3_1
   - scikit-image=0.17.2=py38h81aa140_0
+  - scikit-learn=0.24.1
   - scipy=1.5.2=py38h2515648_0
   - send2trash=1.5.0=py38_0
   - setuptools=50.3.1=py38hecd8cb5_1
