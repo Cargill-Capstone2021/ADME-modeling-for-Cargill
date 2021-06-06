@@ -1,6 +1,6 @@
-# ADME-modeling-for-Cargill
+# ADME Modeling and Prediction for Non-Human Pharmaceutical Lead Screening 
 
-**ADME-modeling-for-Cargill** is a capstone project that was sponsored by Cargill, Inc. and was developed by graduate students from the DIRECT data science program in the University of Washington.  
+**ADME Modeling and Prediction for Non-Human Pharmaceutical Lead Screening** is a capstone project that was sponsored by Cargill, Inc. and was developed by graduate students from the DIRECT data science program in the University of Washington.  
 
 ## Description
 Do you know that developing a new drug takes at least 10 years, with the lead generation taking 3 to 4 years and clinical trails taking six to seven years on average? Any method that can shorten this prosses will be life saving and money saving. The goal of this project is to build a machine learning model that takes the SMILES strings of the drug candidates that are targetted for farm animals and predicts their ADME and toxicity properties in the early drug discovery process. ADME is an abbreviation in pharmacokinetics and pharmacology for "absorption, distribution, metabolism, and excretion", and describes the disposition of a pharmaceutical compound within an organism. The four criteria all influence the drug levels and kinetics of drug exposure to the tissues and hence influence the performance and pharmacological activity of the compound as a drug. With this *in silico* approach, the drug discovery process can be accelerated by 2-3 years. In addition, unnecessary cost and some of the animal experiments can be avoided.
