@@ -39,8 +39,6 @@ See [examples.ipynb](https://github.com/Cargill-Capstone2021/ADME-modeling-for-C
 ## Authors
 Sara Aalinezhad - Department of Chemical Engineering, MS
 
-Yuxuan Ren  - Department of Chemical Engineering, MS
-
 Salek Segid - Department of Chemical Engineering, MS
 
 Liwen Xing - Molecular Engineering & Sciences Institute, PhD
