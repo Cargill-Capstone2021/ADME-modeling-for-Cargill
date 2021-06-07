@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.com/Cargill-Capstone2021/ADME-modeling-for-Cargill.svg?branch=main)](https://travis-ci.com/github/Cargill-Capstone2021/ADME-modeling-for-Cargill)
-[![Coverage Status](https://coveralls.io/repos/github/Cargill-Capstone2021/ADME-modeling-for-Cargill/badge.svg?branch=main)](https://coveralls.io/github/Cargill-Capstone2021/ADME-modeling-for-Cargill?branch=main&service=github)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 # ADME Modeling and Prediction for Non-Human Pharmaceutical Lead Screening 
@@ -41,7 +40,7 @@ conda activate adme
 2. Data prep
 - use data_prep.py to process the data obtained from the last step
 
-3. Train the default model for each ADME feature (SVR_regressor_method.py)
+3. Train the default model for each ADME feature (under adme/modules)
 
 4. Use the model to predict the ADME features of a drug candidate
 
