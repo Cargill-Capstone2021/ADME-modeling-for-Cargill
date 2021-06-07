@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/Cargill-Capstone2021/ADME-modeling-for-Cargill?branch=main)](https://travis-ci.org/Cargill-Capstone2021/ADME-modeling-for-Cargill)
+[![License](https://poser.pugx.org/Cargill-Capstone2021/ADME-modeling-for-Cargill/license.svg)](https://poser.pugx.org/Cargill-Capstone2021/ADME-modeling-for-Cargill/license.svg)
+
 # ADME Modeling and Prediction for Non-Human Pharmaceutical Lead Screening 
 
 **ADME Modeling and Prediction for Non-Human Pharmaceutical Lead Screening** is a capstone project that was sponsored by Cargill, Inc. and was developed by graduate students from the DIRECT data science program in the University of Washington.  
