@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/Cargill-Capstone2021/ADME-modeling-for-Cargill?branch=main)](https://travis-ci.org/Cargill-Capstone2021/ADME-modeling-for-Cargill)
-[![License](https://poser.pugx.org/Cargill-Capstone2021/ADME-modeling-for-Cargill/license.svg)](https://poser.pugx.org/Cargill-Capstone2021/ADME-modeling-for-Cargill/license.svg)
+[![Build Status](https://travis-ci.com/Liwen-Xing/ADME Modeling and Prediction for Non-Human Pharmaceutical Lead Screening.svg?branch=master)](https://travis-ci.com/Liwen-Xing/ADME Modeling and Prediction for Non-Human Pharmaceutical Lead Screening)
 
 # ADME Modeling and Prediction for Non-Human Pharmaceutical Lead Screening 
 
