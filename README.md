@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.com/Cargill-Capstone2021/ADME-modeling-for-Cargill.svg?branch=main)](https://travis-ci.com/github/Cargill-Capstone2021/ADME-modeling-for-Cargill)
-[![Coverage Status](https://coveralls.io/repos/github/Cargill-Capstone2021/ADME-modeling-for-Cargill/badge.svg?branch=main)](https://coveralls.io/github/Cargill-Capstone2021/ADME-modeling-for-Cargill?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/Cargill-Capstone2021/ADME-modeling-for-Cargill/badge.svg?branch=main)](https://coveralls.io/github/Cargill-Capstone2021/ADME-modeling-for-Cargill?branch=main&service=github)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 # ADME Modeling and Prediction for Non-Human Pharmaceutical Lead Screening 
