@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/Liwen-Xing/ADME-modeling-for-Cargill.svg?branch=master)](https://travis-ci.com/Liwen-Xing/ADME-modeling-for-Cargill)
+[![Build Status](https://travis-ci.com/sacloud7/ADME-modeling-for-Cargill.svg?branch=master)](https://travis-ci.com/sacloud7/ADME-modeling-for-Cargill)
 
 # ADME Modeling and Prediction for Non-Human Pharmaceutical Lead Screening 
 
