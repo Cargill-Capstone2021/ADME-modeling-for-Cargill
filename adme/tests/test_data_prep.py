@@ -1,12 +1,12 @@
 import sys
 sys.path.append('../')
+
+import pandas as pd
+
 from data_prep import pre_clean_data
 from data_prep import rearrange_and_clean_data
 from data_prep import combine_rows
 from data_prep import remove_nan
-import pandas as pd
-import numpy as np
-import math
 
 
 def test_pre_clean_data():
