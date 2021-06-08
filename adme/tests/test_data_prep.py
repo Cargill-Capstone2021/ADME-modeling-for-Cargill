@@ -1,4 +1,4 @@
-from adme import data_extract
+from adme import data_prep
 import pandas as pd
 
 
