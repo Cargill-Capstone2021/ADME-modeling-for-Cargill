@@ -1,8 +1,7 @@
-import sqlite3
 import pandas as pd
 import unittest
 from adme import data_extract
-import sys
+
 
 # sys.path.append('../')
 # import data_extract
