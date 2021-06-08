@@ -1,12 +1,5 @@
-import sys
-sys.path.append('../')
-
+from adme import data_extract
 import pandas as pd
-
-from data_prep import pre_clean_data
-from data_prep import rearrange_and_clean_data
-from data_prep import combine_rows
-from data_prep import remove_nan
 
 
 def test_pre_clean_data():
