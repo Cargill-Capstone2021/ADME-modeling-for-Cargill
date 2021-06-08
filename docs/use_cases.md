@@ -23,7 +23,7 @@
 	- *Function* - Change the hyperparameters of the model
 	- *Output* - New model that meets the new expectations of the users
 
-5. Predict similarity of natural product derived drugs to conventional drugs for set application
+5. Predict similarity of natural product derived drugs to conventional drugs for a set application
     - *User* - Researchers
     - *Input* - List of SMILE strings of natural product derived drugs and the SMILE string of a target conventional drug
     - *Function* - Compare natural products to the conventional drug based on their AMDE/Tox and rank them based on prediction of fitness for application
