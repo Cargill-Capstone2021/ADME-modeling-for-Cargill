@@ -302,7 +302,7 @@ def generate_11(smiles, verbose=False):
     return descriptors
 
 
-def generate_11(smiles, verbose=False):
+def generate_12(smiles, verbose=False):
     moldata = []
     for elem in smiles:
         mol = Chem.MolFromSmiles(elem)

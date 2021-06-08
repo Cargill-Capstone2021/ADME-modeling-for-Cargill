@@ -29,7 +29,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib import cm
 from matplotlib.colors import ListedColormap
-%matplotlib inline
+# %matplotlib inline
 matplotlib.rcParams.update({'font.size': 18})
 
 
