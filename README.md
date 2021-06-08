@@ -40,9 +40,12 @@ conda activate adme
 2. Data prep
 - use data_prep.py to process the data obtained from the last step
 
-3. Train the default model for each ADME feature (under adme/modules)
+3. Calculate the molecular descriptors using Descriptors.py
 
-4. Use the model to predict the ADME features of a drug candidate
+4. Train the default model for each ADME feature (under adme/modules)
+
+5. Perform hyperparameter tuning
+
 
 ### Examples
 
