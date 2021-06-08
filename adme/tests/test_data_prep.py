@@ -1,5 +1,4 @@
 import pandas as pd
-import unittest
 from adme import data_prep
 
 
@@ -10,7 +9,7 @@ def test_pre_clean_data():
     """
     input_df = pd.read_csv('input_df_1.csv', sep=';')
     output_df = pd.read_csv('output_df_1.csv', sep=';')
-    df = pre_clean_data(input_df)
+    df = data_prep.pre_clean_data(input_df)
     assert output_df.equals(df),\
         "The function pre_clean_data is broken!"
 
@@ -22,7 +21,7 @@ def test_rearrange_and_clean_data():
     """
     input_df = pd.read_csv('output_df_1.csv', sep=';')
     output_df = pd.read_csv('output_df_2.csv', sep=';')
-    df = rearrange_and_clean_data(input_df)
+    df = data_prep.rearrange_and_clean_data(input_df)
     assert output_df.equals(df),\
         "The function rearrange_and_clean_data is broken!"
 
@@ -34,7 +33,7 @@ def test_combine_rows():
     """
     input_df = pd.read_csv('output_df_2.csv', sep=';')
     output_df = pd.read_csv('output_df_3.csv', sep=';')
-    df = combine_rows(input_df)
+    df = data_prep.combine_rows(input_df)
     assert output_df.equals(df),\
         "The function combine_rows is broken!"
 
@@ -56,7 +55,7 @@ def test_remove_nan():
     df_ppb_output = pd.read_csv('df_PPB_test.csv', sep=';')
 
     df_t_half, df_f, df_auc, df_cmax, df_vdss, df_cl, df_ld50,\
-        df_ic50, df_ppb = remove_nan(input_df)
+        df_ic50, df_ppb = data_prep.remove_nan(input_df)
     assert df_t_half.equals(df_t_half_output) and df_f.equals(df_f_output)\
         and df_auc.equals(df_auc_output) and df_cmax.equals(df_cmax_output)\
         and df_vdss.equals(df_vdss_output) and df_cl.equals(df_cl_output)\
