@@ -45,7 +45,7 @@ for element in df.canonical_smiles:
     mol = Chem.MolFromSmiles(element)
     mol_list.append(mol)
 
-desc_AromaticProportion = [AromaticAtoms(element) /
+desc_AromaticProportion = [Descriptors.AromaticAtoms(element) /
                            Descriptors.HeavyAtomCount(element)
                            for element in mol_list]
 df_desc_AromaticProportion = pd.DataFrame(desc_AromaticProportion,
