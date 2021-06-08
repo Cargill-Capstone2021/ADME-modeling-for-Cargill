@@ -1,62 +1,43 @@
-import Descriptors.py
-
-import numpy as np
+import Descriptors
 import pandas as pd
-
 from rdkit import Chem
 
-import sklearn
 from sklearn.model_selection import train_test_split
-from sklearn import linear_model
 from sklearn.metrics import mean_squared_error, r2_score
-from sklearn import neighbors, svm
-from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.preprocessing import StandardScaler, MinMaxScaler
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import f1_score
-from sklearn.metrics import accuracy_score
-from sklearn.linear_model import LogisticRegression
-from sklearn.pipeline import make_pipeline
-from sklearn.svm import SVC, SVR
-from sklearn.ensemble import BaggingClassifier, RandomForestClassifier,\
-  GradientBoostingClassifier
-from sklearn.model_selection import GridSearchCV
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import SVR
 
 import matplotlib
-# matplotlib.use('GTKAgg')
-import matplotlib.pyplot as plt
-from matplotlib import cm
-from matplotlib.colors import ListedColormap
-%matplotlib inline
 matplotlib.rcParams.update({'font.size': 18})
 
 
-df = data_T_half  # Eliminiation half life. It is the time it takes for
+data_T_half = pd.read_csv('adme/data/T_1_2_final.csv')
+df = data_T_half
+# Eliminiation half life. It is the time it takes for
 # the elimniation processess to reduce the plasma concentration or the
 # amount of drug in the body by 50 percent.
 
 df = df[df['T1/2 /hr'] < 1]  # removing outliers
 
-df1 = generate(df.canonical_smiles)
-df2 = generate_1(df.canonical_smiles)
-df3 = generate_2(df.canonical_smiles)
-df4 = generate_3(df.canonical_smiles)
-df5 = generate_4(df.canonical_smiles)
-df6 = generate_5(df.canonical_smiles)
-# df7 = generate_6(df.canonical_smiles) descriptors not relevant
-df8 = generate_7(df.canonical_smiles)
-df9 = generate_8(df.canonical_smiles)
-df10 = generate_9(df.canonical_smiles)
-df11 = generate_10(df.canonical_smiles)
-df12 = generate_11(df.canonical_smiles)
-# df13 = generate_12(df.canonical_smiles) descriptors not relevant
-# df14 = generate_13(df.canonical_smiles) descriptors not relevant
-df15 = generate_14(df.canonical_smiles)
-df16 = generate_15(df.canonical_smiles)
-df17 = generate_16(df.canonical_smiles)
-df18 = generate_17(df.canonical_smiles)
-df19 = generate_18(df.canonical_smiles)
+df1 = Descriptors.generate(df.canonical_smiles)
+df2 = Descriptors.generate_1(df.canonical_smiles)
+df3 = Descriptors.generate_2(df.canonical_smiles)
+df4 = Descriptors.generate_3(df.canonical_smiles)
+df5 = Descriptors.generate_4(df.canonical_smiles)
+df6 = Descriptors.generate_5(df.canonical_smiles)
+# df7 = Descriptors.generate_6(df.canonical_smiles) descriptors not relevant
+df8 = Descriptors.generate_7(df.canonical_smiles)
+df9 = Descriptors.generate_8(df.canonical_smiles)
+df10 = Descriptors.generate_9(df.canonical_smiles)
+df11 = Descriptors.generate_10(df.canonical_smiles)
+df12 = Descriptors.generate_11(df.canonical_smiles)
+# df13 = Descriptors.generate_12(df.canonical_smiles) descriptors not relevant
+# df14 = Descriptors.generate_13(df.canonical_smiles) descriptors not relevant
+df15 = Descriptors.generate_14(df.canonical_smiles)
+df16 = Descriptors.generate_15(df.canonical_smiles)
+df17 = Descriptors.generate_16(df.canonical_smiles)
+df18 = Descriptors.generate_17(df.canonical_smiles)
+df19 = Descriptors.generate_18(df.canonical_smiles)
 
 
 mol_list = []
