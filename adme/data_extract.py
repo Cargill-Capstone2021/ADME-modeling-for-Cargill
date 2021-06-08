@@ -11,21 +11,22 @@ import pandas as pd
 # In[2]:
 
 
-def database_file_to_data_frame(db):
+def dbfile_to_dataframe(dbfile):
     """
-    Creates a SQL connection to the SQLite.This function reads
-    SQL database files, executes SQL queries in python
-    and extracts data for specific table and returns a DataFrame
+    Creates a SQL connection to the SQLite. This function
+    reads SQL database files, executes SQL queries in python
+    and extracts data for specific table and
+    returns a pandas DataFrame
     Parameters
     ----------
-    - db: database file/ full path of database file
+    - dbfile: path of the database file
 
     Returns
     -------
     - modified DataFrame based on the user selected tables and columns
     """
 
-    con = sqlite3.connect(db)
+    con = sqlite3.connect(dbfile)
     # The desired sql query could be written in """ """
     # to join the desired table and columns
     df = pd.read_sql_query("""SELECT * FROM source""", con)
