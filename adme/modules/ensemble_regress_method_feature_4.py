@@ -70,8 +70,8 @@ regressor.fit(X_train, y_train)
 
 y_pred_test = regressor.predict(X_test)
 
-print('Coefficients:', model.coef_)
-print('Intercept:', model.intercept_)
+print('Coefficients:', regressor.coef_)
+print('Intercept:', regressor.intercept_)
 print('Mean squared error (MSE): %.2f'
       % mean_squared_error(y_test, y_pred_test))
 print('Coefficient of determination (R^2): %.2f'
