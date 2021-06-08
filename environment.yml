@@ -5,6 +5,7 @@ channels:
   - defaults
 dependencies:
   - altair
+  - pandas
   - python=3.7.*
   - deepchem=2.5.0
   - rdkit
