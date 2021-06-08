@@ -9,7 +9,8 @@ from adme import data_extract
 
 class Testdataextract(unittest.TestCase):
     def test_dbfile_to_dataframe(self):
-        result = list(data_extract.dbfile_to_dataframe('tests/source.db').columns)
+        result = list(data_extract.
+                      dbfile_to_dataframe('tests/source.db').columns)
         self.assertEqual(result, [
             'organism', 'standard_type', 'standard_value',
             'standard_units', 'chembl_id',
