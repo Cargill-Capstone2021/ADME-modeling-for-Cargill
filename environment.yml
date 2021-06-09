@@ -5,7 +5,7 @@ channels:
   - defaults
 dependencies:
   - altair
-  - pandas=1.0.1
+  - pandas=1.2.1
   - python=3.7.*
   - pycodestyle
   - numpy
