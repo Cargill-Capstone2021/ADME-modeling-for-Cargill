@@ -7,7 +7,7 @@ def test_generate(self):
   """
   Unit test for generating molecular descriptors.
   """
-  df = pd.read('Cmax_final.csv')
+  df = pd.read('df_Cmax_final.csv')
   input = df.canonical_smiles
   columnNames=["MolWt","NumRotatableBonds"] 
   baseData= np.arange(1,1)
@@ -21,7 +21,7 @@ def test_generate(self):
 
 def test_generate_1(self):
 
-  df = pd.read('Cmax_final.csv')
+  df = pd.read('df_Cmax_final.csv')
   input = df.canonical_smiles
   columnNames=["MolMR","HeavyAtomCount","HeavyAtomMolwt"]   
   baseData= np.arange(1,1)
